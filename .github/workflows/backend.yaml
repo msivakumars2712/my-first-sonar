@@ -2,7 +2,7 @@ name: SonarCloud Backend
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "/**"
       - ".github/workflows/backend.yml"
@@ -52,7 +52,6 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
-          projectBaseDir: /
           args: >
             -Dsonar.python.coverage.reportPaths=coverage-reports/coverage.xml
         env:
