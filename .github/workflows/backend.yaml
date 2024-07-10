@@ -2,9 +2,9 @@ name: SonarCloud Backend
 on:
   push:
     branches:
-      - main
+      - master
     paths:
-      - "/**"
+      - "./**"
       - ".github/workflows/backend.yml"
   pull_request:
     types: [opened, synchronize, reopened]
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /
+        working-directory: ./
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
