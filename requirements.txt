@@ -1,2 +1,6 @@
+pytest-cov
 flask
 python-dotenv
+pytest
+coverage
+pytest-asyncio
